@@ -221,7 +221,7 @@ Los pesos finales del modelo fueron almacenados en un archivo `.npz`, el cual co
 
 <div align="center">
 
-![Accuracy](images/accuracy.png)
+![Accuracy](acc.png)
 
 </div>
 
@@ -233,7 +233,7 @@ Los pesos finales del modelo fueron almacenados en un archivo `.npz`, el cual co
 
 <div align="center">
 
-![Loss](images/loss.png)
+![Loss](loss.png)
 
 </div>
 
