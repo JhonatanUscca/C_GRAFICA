@@ -87,9 +87,9 @@ En lugar de utilizar una capa lineal tradicional para generar los embeddings, se
 
 Durante el entrenamiento cada neurona ajusta sus pesos según:
 
-\[
+$$
 W_i(t+1)=W_i(t)+\eta \cdot h_{bi}(t)\cdot(x-W_i(t))
-\]
+$$
 
 donde:
 
@@ -106,9 +106,9 @@ Posteriormente, estas activaciones son proyectadas al espacio de embeddings medi
 
 Debido a que el Transformer no conoce la posición de cada patch, se añade un vector posicional:
 
-\[
+$$
 Z = E + P
-\]
+$$
 
 donde:
 
@@ -125,15 +125,15 @@ La atención del modelo fue reemplazada por una **Modern Hopfield Network**, la 
 
 La matriz de atención se obtiene mediante:
 
-\[
+$$
 A=\text{Softmax}\left(\frac{QK^T}{\sqrt{d}}\right)
-\]
+$$
 
 Posteriormente se recupera el nuevo estado mediante:
 
-\[
+$$
 H=A\cdot V
-\]
+$$
 
 Este mecanismo permite recuperar patrones relevantes de memoria durante la clasificación.
 
@@ -149,9 +149,9 @@ Después de la capa Hopfield, únicamente el **CLS Token** atraviesa un perceptr
 
 La función de activación utilizada es **ReLU**:
 
-\[
+$$
 ReLU(x)=\max(0,x)
-\]
+$$
 
 Esta función introduce no linealidad y evita que el modelo aprenda únicamente relaciones lineales.
 
@@ -161,9 +161,9 @@ Esta función introduce no linealidad y evita que el modelo aprenda únicamente 
 
 Antes de cada bloque principal se aplica **Layer Normalization**, calculada como:
 
-\[
+$$
 LN(x)=\gamma\frac{x-\mu}{\sqrt{\sigma^2+\epsilon}}+\beta
-\]
+$$
 
 Esta técnica estabiliza el entrenamiento y acelera la convergencia del modelo.
 
@@ -175,15 +175,15 @@ La clasificación utiliza la función **Softmax Cross Entropy**.
 
 Softmax:
 
-\[
+$$
 P_i=\frac{e^{z_i}}{\sum_j e^{z_j}}
-\]
+$$
 
 Cross Entropy:
 
-\[
+$$
 L=-\log(P_{real})
-\]
+$$
 
 ---
 
