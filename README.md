@@ -187,23 +187,6 @@ $$
 
 ---
 
-# Resultados
-
-## Accuracy durante el entrenamiento
-
-> **Agregar gráfica aquí**
-
-![Accuracy](images/accuracy.png)
-
----
-
-## Loss durante el entrenamiento
-
-> **Agregar gráfica aquí**
-
-![Loss](images/loss.png)
-
----
 
 # Archivos generados
 
