@@ -221,6 +221,43 @@ $$
 
 ---
 
+# Resultados del entrenamiento
+
+El modelo fue entrenado utilizando el conjunto de datos **EMNIST Balanced** durante **10 épocas**, obteniendo una precisión de clasificación superior al **98 %** en el conjunto de validación.
+
+Durante el entrenamiento se registraron las siguientes métricas:
+
+- Accuracy de entrenamiento
+- Accuracy de validación
+- Training Loss
+- Validation Loss
+
+Los pesos finales del modelo fueron almacenados en un archivo `.npz`, el cual contiene todos los parámetros necesarios para reconstruir el Vision Transformer sin necesidad de volver a entrenarlo.
+
+## Accuracy
+
+<div align="center">
+
+![Accuracy](images/accuracy.png)
+
+</div>
+
+*Figura 1. Evolución del Accuracy durante el entrenamiento.*
+
+---
+
+## Loss
+
+<div align="center">
+
+![Loss](images/loss.png)
+
+</div>
+
+*Figura 2. Evolución de la función de pérdida durante el entrenamiento.*
+
+Durante las primeras épocas se observa una rápida disminución de la pérdida, mientras que el accuracy aumenta progresivamente hasta estabilizarse, indicando que el modelo converge correctamente y logra una buena capacidad de generalización.
+
 # Autor
 
 Proyecto desarrollado como implementación desde cero de un **Vision Transformer híbrido (Kohonen + Modern Hopfield)** para la clasificación de caracteres del conjunto de datos **EMNIST Balanced**.
