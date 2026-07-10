@@ -63,9 +63,9 @@ A diferencia de las Redes Neuronales Convolucionales (CNN), el Vision Transforme
 
 Cada imagen se divide en regiones de tamaño fijo:
 
-\[
+%[
 N=\frac{H\times W}{P^2}
-\]
+%]
 
 donde:
 
